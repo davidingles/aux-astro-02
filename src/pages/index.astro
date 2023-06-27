@@ -8,47 +8,48 @@ import Card from '../components/Card.astro';
 		<section class="place-content-center p-4 md:p-12 bg-slate-50 max-w-xs md:max-w-2xl">
 			<img src="/logo-aux.svg" alt="logo de Auxiliar Manipuladora del Cartón" class="w-[100%] md:w-[66%] self-center">
 			<div class="flex flex-col w-[100%]">
-				<button class="instructions mt-12 w-auto self-center">
-					<span class="text-gradient pointer-events-auto">Entra y conócenos</span>
+				<button class="instructions mt-12 w-auto self-center font-bold">
+					<a href="/home" class="text-gradient pointer-events-auto"><span>Entra y conócenos</span><br><span>968 55 44 33</span></a>
 				</button>
-				<span class="text-sm mb-2 mt-6 text-slate-400 ml-20">o ve al grano...</span>
+				<span class="text-sm mb-2 mt-6 text-slate-400 ml-4 md:ml-20">o ve al grano...</span>
 				<ul role="list" class="link-card-grid self-center">
 					<Card
-						href="https://docs.astro.build/"
+						href="/catalogo"
 						title="Catalogo"
 						body="Descubre nuestro principales productos."
 					/>
 					<Card
-						href="https://astro.build/integrations/"
+						href="servicios"
 						title="Servicios"
 						body="Accede a nuestro servicios y consúltanos."
 					/>
 					<Card
-						href="https://astro.build/themes/"
+						href='/design'
 						title="Diseño"
 						body="¿Necesitas un diseño? ¿Estás desarrollando un proyecto?."
 					/>
 					<Card
-						href="https://astro.build/chat/"
+						href="/contacto"
 						title="Contacto"
-						body="Come say hi to our amazing Discord community. 📌  "
+						body="Estamos para ayudarte. llámanos o encuéntranos. 📌"
 					/>
 				</ul>
 			</div>
+			<div class="absolute bottom-0 left-4 text-zinc-400 text-[.8rem]">Aviso Legal.  Marca Registrada@</div>
 		</section>
 	</main>
 </Layout>
 
 <style>
+	main{
+		position:relative;
+	}
 	section {
-		/* position: absolute; */
-
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		margin: auto;
-		
 		padding: 1.5rem;
-		/* max-width: 70%; */
 		height: 100vh;
 		place-self: center;
 	}
@@ -74,5 +75,12 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+	button{
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+	}
+	button:hover {
+		box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1), 0 2px 4px -4px rgba(0, 0, 0, 0.1);
+
 	}
 </style>
