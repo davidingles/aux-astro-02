@@ -4,43 +4,51 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="Auxiliar Manipuladora del Cartón">
-	<main>
-		<img src="/logo-aux.svg" alt="logo de Auxiliar Manipuladora del Cartón" class="w-[55%] self-center">
-		<button class="instructions">
-			<span class="text-gradient pointer-events-auto">Entra y conócenos</span>
-		</button>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Catalogo"
-				body="Descubre nuestro principales productos."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Servicios"
-				body="Accede a nuestro servicios y consúltanos."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Diseño"
-				body="¿Necesitas un diseño? ¿Estás desarrollando un proyecto?."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Contacto"
-				body="Come say hi to our amazing Discord community. 📌  "
-			/>
-		</ul>
+	<main class="bg-white">
+		<section class="place-content-center p-12 bg-slate-50">
+			<img src="/logo-aux.svg" alt="logo de Auxiliar Manipuladora del Cartón" class="w-[55%] self-center">
+			<button class="instructions">
+				<span class="text-gradient pointer-events-auto">Entra y conócenos</span>
+			</button>
+			<span class="text-sm mb-2 mt-6 text-slate-400">o ve al grano...</span>
+			<ul role="list" class="link-card-grid">
+				<Card
+					href="https://docs.astro.build/"
+					title="Catalogo"
+					body="Descubre nuestro principales productos."
+				/>
+				<Card
+					href="https://astro.build/integrations/"
+					title="Servicios"
+					body="Accede a nuestro servicios y consúltanos."
+				/>
+				<Card
+					href="https://astro.build/themes/"
+					title="Diseño"
+					body="¿Necesitas un diseño? ¿Estás desarrollando un proyecto?."
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					title="Contacto"
+					body="Come say hi to our amazing Discord community. 📌  "
+				/>
+			</ul>
+		</section>
 	</main>
 </Layout>
 
 <style>
-	main {
+	section {
+		/* position: absolute; */
+
 		display: flex;
 		flex-direction: column;
 		margin: auto;
+		
 		padding: 1.5rem;
-		max-width: 60%;
+		max-width: 70%;
+		height: 100vh;
+		place-self: center;
 	}
 
 	.text-gradient {
