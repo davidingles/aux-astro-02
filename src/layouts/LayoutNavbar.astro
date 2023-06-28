@@ -1,0 +1,48 @@
+---
+import Layout from "./Layout.astro";
+import { menuItems } from "../data/menuItems";
+import Modal from "../components/Modal.astro";
+const { title } = Astro.props;
+
+// border-8 border-red-400 
+---
+<Layout title={title}>
+
+    <main class="max-w-screen max-h-screen fixed">
+        <nav class="flex bg-black bg-opacity-10 ralative justify-between">
+            <a href="/" class="p-1 ml-2"><img class="w-8" src="/home.svg" alt="icono de home"></a>
+            <ul class="text-black p-2 mr-6 flex gap-2">
+                { menuItems.map( item => (
+                    <li>
+                        <a href={item.url}>
+                            <span>{item.nombre}</span>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+        
+        
+        <slot/>
+        
+        
+        <footer class="absolute bottom-0 left-4 text-zinc-400 text-[.8rem]">
+            <Modal/>
+        </footer>
+
+
+    </main>
+
+
+
+</Layout>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+</style>

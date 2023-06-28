@@ -1,46 +1,25 @@
 ---
+import type { TarjetaType } from "../../types/types"
 
-export interface Tarjeta {
-    jefe: string;
-    numero: string;
-    david: string;
-}
-interface Props extends Tarjeta{}
+interface Props extends TarjetaType{}
 
-const { jefe, numero, david } = Astro.props;
+const { jefe, telefono } = Astro.props;
+
 ---
 
-<article class={david}>
-    <img src={jefe} alt="jefe">
-    <span>{numero}</span>
+
+<article class="relative w-[16rem] transition-all duration-300 ease">
+    <img class="" src={jefe} alt="">
+    <span class="absolute text-[2.5rem] font-bold bottom-0 left-4 right-0 m-auto whitespace-nowrap opacity-0 transform translate-y-20 transition-all duration-300 ease">{telefono}</span>
 </article>
 
 <style>
-    article{
-        position: relative;
-        width: 333px;
-        transition: all .3s ease;
-        /* border: solid 2px red; */
-    }
 
-    article img:first-child{
+    article img{
         object-fit: cover;
         width: 100%;
         box-shadow: 1px 1px 5px 0px rgba(0,0,0,.5);
         border-radius: 1rem;
-    }
-
-    span{
-        position: absolute;
-        font-size: 3rem;
-        white-space: nowrap;
-        transform: translateY(0%);
-        transform: translateX(-50%);
-        left: 50%;
-        transition: all .3s ease;
-        font-weight: bold;
-        opacity: .0;
-
     }
 
     article:hover{
@@ -49,7 +28,7 @@ const { jefe, numero, david } = Astro.props;
 
     article:hover span{
         opacity: 1;
-        transform: translateX(-50%) translateY(-150%);
+        transform: translateY(-22%);
     }
 
     article::before{
@@ -66,7 +45,7 @@ const { jefe, numero, david } = Astro.props;
             rgba(255,255,255,.5) 50%,
             rgba(255,255,255)95%
         );
-        opacity: 0;
+        opacity: 0.0;
         transition: all .3s ease;
     }
     article:hover::before{

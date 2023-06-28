@@ -1,0 +1,61 @@
+---
+import { avisoLegal } from "../data/avisoLega";
+---
+
+
+
+
+<a href="#modal" class="open-modal">Aviso Legal - Marca Registrada@</a>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-modal">&times;</a>
+    <h2>Aviso Legal</h2>
+    <p>{avisoLegal}</p>
+  </div>
+</div>
+
+
+<style>
+   
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+.modal:target {
+  display: block;
+}
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(0,0,0,1);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 1rem;
+}
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.open-modal {
+  color: #616161;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* .open-modal:hover {
+  background-color: #45a049;
+} */
+</style>

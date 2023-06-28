@@ -1,13 +1,17 @@
 ---
 import Tarjeta from "../components/Tarjeta.astro";
+import LayoutNavbar from "../layouts/LayoutNavbar.astro";
 
 ---
+<!-- border-8 border-red-600 -->
 
-<main class="w-screen h-screen border-red-600 items-center border-2 flex">
-    <section class="flex flex-col md:flex-wrap  justify-center w-[100%] md:w-[88%] h-screen m-auto border-2">
-        <Tarjeta jefe="/david.jpg" numero="968 555 333" david="scale-100"></Tarjeta>
-        <Tarjeta jefe="/david.jpg" numero="968 555 333" david="scale-100"></Tarjeta>
-        <Tarjeta jefe="/david.jpg" numero="968 555 333" david="scale-100"></Tarjeta>
-        <Tarjeta jefe="/david.jpg" numero="968 555 333" david="scale-100"></Tarjeta>
-    </section>
-</main>
+<LayoutNavbar title="Contactos de la Auxiliar">
+    <main class="w-screen h-screen items-center flex">
+        <section class="grid grid-cols md:grid-cols-2 gap-8 md:flex-wrap justify-center mt-12 md:mt-auto md:w-auto h-auto m-auto">
+            <Tarjeta jefe="/Administracion.jpg" telefono="968 555 333"></Tarjeta>
+            <Tarjeta jefe="/Jesus2.jpg" telefono="968 555 333"></Tarjeta>
+            <Tarjeta jefe="/Angelin.jpg" telefono="968 555 333"></Tarjeta>
+            <Tarjeta jefe="/Angelin.jpg" telefono="968 555 333"></Tarjeta>
+        </section>
+    </main>
+</LayoutNavbar>
