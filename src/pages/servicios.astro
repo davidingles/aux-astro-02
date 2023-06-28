@@ -1,8 +1,86 @@
 ---
+import Tarjeta from "../components/Tarjeta.astro";
 import Layout from "../layouts/Layout.astro";
+import LayoutNavbar from "../layouts/LayoutNavbar.astro";
 
 ---
+<!-- border-8 border-red-600 -->
 
-<Layout title="Servicios Auxiliar">
-    <h1>Servicios</h1>
-</Layout>
+<LayoutNavbar title="Servicios Axiliar Manipuladora">
+    <main class="w-screen h-screen items-center flex">
+        <section class="grid grid-cols md:grid-cols-2 gap-8 md:flex-wrap justify-center mt-12 md:mt-auto md:w-auto h-auto m-auto">
+            <Tarjeta jefe="/Administracion.jpg" telefono="968 555 333"></Tarjeta>
+            <!-- <Tarjeta jefe="/Angelin.jpg" telefono="968 555 333"></Tarjeta> -->
+            <Tarjeta jefe="/Jesus2.jpg" telefono="968 555 333"></Tarjeta>
+            <Tarjeta jefe="/Angelin.jpg" telefono="968 555 333"></Tarjeta>
+            <Tarjeta jefe="/Angelin.jpg" telefono="968 555 333"></Tarjeta>
+        </section>
+    </main>
+</LayoutNavbar>
+
+<!-- <Layout title="Servicios Auxiliar">
+    <article>
+        <img src={david} alt="">
+        <span>968 555 322</span>
+    </article>
+    </Layout>
+    
+    <style>
+        article{
+            position: relative;
+            width: 333px;
+            transition: all .3s ease;
+        }
+    
+        article img:first-child{
+            object-fit: cover;
+            width: 100%;
+            box-shadow: 1px 1px 5px 0px rgba(0,0,0,.5);
+            border-radius: 1rem;
+        }
+    
+        span{
+            position: absolute;
+            font-size: 3rem;
+            white-space: nowrap;
+            transform: translateY(0%);
+            transform: translateX(-50%);
+            left: 50%;
+            transition: all .3s ease;
+            font-weight: bold;
+            opacity: .1;
+    
+        }
+    
+        article:hover{
+            transform: perspective(222px) rotateX(10deg) translateY(-16%) translateZ(0);
+        }
+    
+        article:hover span{
+            opacity: 1;
+            transform: translateX(-50%) translateY(-150%);
+        }
+    
+        article::before{
+            content:'';
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 1px 22px 22px -15px rgba(0,0,0,.5);
+            background-image: linear-gradient(
+                to bottom,
+                transparent 10%,
+                rgba(255,255,255,.5) 50%,
+                rgba(255,255,255)95%
+            );
+            opacity: 0;
+            transition: all .3s ease;
+        }
+        article:hover::before{
+            opacity: 1;
+        }
+    
+    
+    </style> -->
