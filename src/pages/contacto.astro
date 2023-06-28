@@ -1,17 +1,27 @@
 ---
-import Tarjeta from "../components/Tarjeta.astro";
-import LayoutNavbar from "../layouts/LayoutNavbar.astro";
-
+import Maps from '../components/Maps.astro'
+import Tarjeta from '../components/Tarjeta.astro'
+import LayoutNavbar from '../layouts/LayoutNavbar.astro'
 ---
-<!-- border-8 border-red-600 -->
 
-<LayoutNavbar title="Contactos de la Auxiliar">
-    <main class="w-screen h-screen items-center flex">
-        <section class="grid grid-cols md:grid-cols-2 gap-8 md:flex-wrap justify-center mt-12 md:mt-auto md:w-auto h-auto m-auto">
-            <Tarjeta jefe="/Administracion.jpg" telefono="968 555 333"></Tarjeta>
-            <Tarjeta jefe="/Jesus2.jpg" telefono="968 555 333"></Tarjeta>
-            <Tarjeta jefe="/Angelin.jpg" telefono="968 555 333"></Tarjeta>
-            <Tarjeta jefe="/Angelin.jpg" telefono="968 555 333"></Tarjeta>
-        </section>
+<!-- border-8 border-red-600 -->
+<LayoutNavbar title='Contactos de la Auxiliar'>
+    <main class='w-screen h-screen flex flex-col justify-center place-items-center'>
+
+        <h3>Horario de atención al cliente:<br>8:00 a 13:30 y de 14:00 a 19:00<br>
+        pero siempre es mejor llamar primero<br>
+    Recuerda: 968 555 333</h3>
+
+        <div class='relative map w-[66%] h-[44%] border-2 border-white rounded-[1rem]'>
+            <div class="flex bg-white map absolute top-0 right-2 p-2 justify-end">Ven a visitarnos</div>
+            <Maps />
+        </div>
     </main>
 </LayoutNavbar>
+
+<style>
+    .map {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+</style>
